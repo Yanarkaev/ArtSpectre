@@ -1,1 +1,22 @@
 /* КАЭСЭС */
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background: #1668c8;
+  padding: 20px;
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo {
+  font-size: 32px;
+  color: #fff;
+}
