@@ -1,4 +1,3 @@
-/* КАЭСЭС */
 
 * {
   box-sizing: border-box;
@@ -20,3 +19,36 @@ header {
   font-size: 32px;
   color: #fff;
 }
+
+.introblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.introtitle {
+    font-size: 64px;
+    margin: 20px 0;
+}
+
+
+.introsub {
+    font-size: 24px;
+}
+
+.introbtn {
+    font-size: 24px;
+    padding: 20px 60px;
+    background-color: #4577D4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-top: 150px;
+    cursor: pointer;
+}
+
+.introbtn:hover {
+    background-color: #3862b0;
+
+}
+
