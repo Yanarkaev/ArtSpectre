@@ -15,14 +15,14 @@ header {
     margin: 0 auto;
 }
 
-.cartIcon {
+.cartIcon{
     cursor: pointer;
 }
 
 
 .logo {
-    font-size: 32px;
-    color: #fff;
+  font-size: 32px;
+  color: #fff;
 }
 
 .introblock {
@@ -98,3 +98,4 @@ header {
     margin: 0 auto;
     justify-content: center;
 }
+
