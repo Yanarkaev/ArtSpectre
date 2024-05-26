@@ -206,3 +206,7 @@ header {
 .cartModalOrderBtn:hover{
     background-color: #032c72;
 }
+
+.hide{
+  display: none;
+}
