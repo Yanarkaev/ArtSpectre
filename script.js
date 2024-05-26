@@ -1,4 +1,4 @@
-// ЯВАСКРИПТ
+
 let data = [
     {
         id: 1,
@@ -35,6 +35,14 @@ let data = [
         imgPath: "",
     },
 ];
+
+let cartIcon=document.querySelector(".cartIcon")
+let cartModal=document.querySelector(".cartModal")
+
+cartIcon.addEventListener("click",function(){
+  cartModal.classList.toggle("hide")
+
+})
 
 let productCardsWrapper = document.querySelector(".productCardsWrapper");
 

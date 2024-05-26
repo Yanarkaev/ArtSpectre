@@ -99,8 +99,6 @@ header {
     justify-content: center;
 }
 
-}
-
 /* ================== Корзина */
 
 .cartModal {
@@ -187,4 +185,8 @@ header {
 .cartModalOrderSum{
 
 }
+
+
+.hide{
+  display: none;
 }
