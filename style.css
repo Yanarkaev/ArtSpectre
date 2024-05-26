@@ -142,6 +142,10 @@ header {
     width: 100%;
 }
 
+.cartModalProduct:not(:last-of-type){
+    margin-bottom: 20px;
+}
+
 .cartModalLeftBlock {
     max-width: 420px;
     width: 100%;
@@ -168,24 +172,40 @@ header {
 
 .cartModalOrder{
     display: flex;
+    flex-direction: column;
     border: 1px solid black;
     width: 100%;
-    width: 250px;
-    height: 150px;
+    max-width: 250px;
     border-radius: 15px;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
 }
 .cartModalTotal{
     font-size: 20px;
     font-weight: 600;
-    margin-top: 20px
+    /* margin-top: 20px; */
+    display: flex;
+    justify-content: space-between;
 }
 
 .cartModalOrderSum{
 
 }
 
+.cartModalOrderBtn{
+    background-color: #1047A9;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s background-color;
+}
+.cartModalOrderBtn:hover{
+    background-color: #032c72;
+}
 
 .hide{
   display: none;
