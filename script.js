@@ -1,47 +1,37 @@
-// ЯВАСКРИПТ
-
-let cartIcon = document.querySelector(".cartIcon");
-let cartModal = document.querySelector(".cartModal");
-
-cartIcon.addEventListener("click", function(){
-    cartModal.classList.toggle("hide")
-})
-
-
 let data = [
     {
         id: 1,
-        name: "Зима",
+        name: "Ночь у берега",
         price: 2500000,
-        imgPath: "",
+        imgPath: "./assets/photo_2024-06-01_09-45-15.jpg",
     },
 
     {
         id: 2,
-        name: "Осень",
+        name: "Горы за лесами",
         price: 2800000,
-        imgPath: "",
+        imgPath: "./assets/photo_2024-06-01_09-45-22.jpg",
     },
 
     {
         id: 3,
-        name: "Весна",
+        name: "Ассорти",
         price: 2700000,
-        imgPath: "",
+        imgPath: "./assets/photo_2024-06-01_09-45-29.jpg",
     },
 
     {
         id: 4,
         name: "Лето",
         price: 2200000,
-        imgPath: "",
+        imgPath: "./assets/photo_2024-06-01_09-45-43.jpg",
     },
 
     {
-        id: 5,
-        name: "Межсезонье",
+        id: 6,
+        name: "Пейзаж гор",
         price: 2900000,
-        imgPath: "",
+        imgPath: "./assets/photo_2024-06-01_09-47-18.jpg",
     },
 ];
 
@@ -60,7 +50,8 @@ function renderProducts(){
         productCardsWrapper.innerHTML += `
         <div class="productCard">
         <div class="productImg">
-
+            <img src=${data[i].imgPath} />
+            
         </div>
         <div class="productInfo">
         <span class="productName">${data[i].name}</span>
