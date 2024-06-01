@@ -112,6 +112,10 @@ header {
     align-items: start;
 }
 
+.hide{
+    display: none;
+}
+
 .cartModalProductImg {
     width: 120px;
     height: 150px;
