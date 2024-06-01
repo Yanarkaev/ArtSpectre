@@ -99,8 +99,6 @@ header {
     justify-content: center;
 }
 
-}
-
 /* ================== Корзина */
 
 .cartModal {
@@ -112,6 +110,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: start;
+}
+
+.hide{
+    display: none;
 }
 
 .cartModalProductImg {
@@ -186,5 +188,4 @@ header {
 
 .cartModalOrderSum{
 
-}
 }
