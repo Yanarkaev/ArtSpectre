@@ -37,18 +37,19 @@ let data = [
 
 let cartData = [];
 
-let cartIcon=document.querySelector(".cartIcon")
-let cartModal=document.querySelector(".cartModal")
+let cartIcon = document.querySelector(".cartIcon")
+let cartModal = document.querySelector(".cartModal")
 
-cartIcon.addEventListener("click",function(){
-  cartModal.classList.toggle("hide")
+cartIcon.addEventListener("click", function () {
+    cartModal.classList.toggle("hide")
 
 })
 
+let cartModalLeftBlock = document.querySelector(".cartModalLeftBlock")
 let productCardsWrapper = document.querySelector(".productCardsWrapper");
 
-function renderProducts(){
-    for (let i = 0; i < data.length; i++){
+function renderProducts() {
+    for (let i = 0; i < data.length; i++) {
         productCardsWrapper.innerHTML += `
         <div class="productCard">
         <div class="productImg">
@@ -63,18 +64,39 @@ function renderProducts(){
         </div>
         `;
     }
-     
-    let buyBtns =
-    document.querySelectorAll(".buyBtn");
 
-    for (let i = 0; i< buyBtns.length;i++){
-     buyBtns[i].addEventListener("click", function (){
-        buyBtns[i].innerHTML = "В корзине"
-        cartData.push({ ...data[i], count: 1});
-     });   
+    let buyBtns =
+        document.querySelectorAll(".buyBtn");
+
+    for (let i = 0; i < buyBtns.length; i++) {
+        buyBtns[i].addEventListener("click", function () {
+            buyBtns[i].innerHTML = "В корзине"
+            cartData.push({ ...data[i], count: 1 });
+            console.log(cartData)
+            renderCart()
+        });
     }
 
 }
 
 renderProducts();
-    
+
+
+function renderCart() {
+    cartModalLeftBlock.innerHTML = "";
+    for (let i = 0; i < cartData.length; i++) {
+        cartModalLeftBlock.innerHTML += `
+    <div class="cartModalProduct">
+    <div class="cartModalProductImg"></div>
+    <div class="cartModalProductInfo">
+      <span class="cartModalProductName">${cartData[i].name}</span>
+      <span class="cartModalProductPrice">${cartData[i].price}</span>
+    </div>
+    <div class="cartModalCounter">
+      <button class="cartModalCounterDec">-</button>
+    <span class="cartModalProductCount">${cartData[i].count}</span>
+      <button class="cartModalCounterInc">+</button>
+    </div>
+  </div>`;
+    }
+}
