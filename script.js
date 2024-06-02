@@ -35,6 +35,8 @@ let data = [
     },
 ];
 
+let cartData = [];
+
 let cartIcon=document.querySelector(".cartIcon")
 let cartModal=document.querySelector(".cartModal")
 
@@ -61,6 +63,18 @@ function renderProducts(){
         </div>
         `;
     }
+     
+    let buyBtns =
+    document.querySelectorAll(".buyBtn");
+
+    for (let i = 0; i< buyBtns.length;i++){
+     buyBtns[i].addEventListener("click", function (){
+        buyBtns[i].innerHTML = "В корзине"
+        cartData.push({ ...data[i], count: 1});
+     });   
+    }
+
 }
 
 renderProducts();
+    
