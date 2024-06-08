@@ -75,8 +75,8 @@ function renderProducts() {
   for (let i = 0; i < buyBtns.length; i++) {
     buyBtns[i].addEventListener("click", function () {
       buyBtns[i].innerHTML = "В корзине";
+      buyBtns[i].disabled = true;
       cartData.push({ ...data[i], count: 1 });
-      console.log(cartData);
       renderCart();
     });
   }
