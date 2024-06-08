@@ -82,9 +82,6 @@ function renderProducts() {
   }
 }
 
-let greets = ["hello", "привет", "bye", "пока", 123421421]
-console.log(greets.length)
-
 renderProducts();
 
 function renderCart() {
