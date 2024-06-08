@@ -125,6 +125,12 @@ header {
     border: 0;
     border-radius: 5px;
     cursor: pointer;
+    cursor: default;
+}
+
+.buyBtn:disabled{
+    opacity: 0.5;
+    cursor: no-drop;
 }
 
 .productCardsWrapper{
