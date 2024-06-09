@@ -127,9 +127,17 @@ function renderCart() {
             calcTotalSum();
         });
 
-        decBtns[i].addEventListener("click", function () {
+    decBtns[i].addEventListener("click", function () {
+        if (cartData[i].count <= 1) {
+            cartData.splice(i, 1);
+            renderCart();
+        }
+        else {
             cartData[i].count -= 1;
-            productCount[i].innerHTML = cartData[i].count;
-        });
-    }
+        }
+        productCount[i].    innerHTML = cartData[i].count;
+    });
+
+    
+}
 }
