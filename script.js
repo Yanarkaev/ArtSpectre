@@ -46,6 +46,7 @@ cartIcon.addEventListener("click", function () {
 
 let cartModalLeftBlock = document.querySelector(".cartModalLeftBlock");
 let productCardsWrapper = document.querySelector(".productCardsWrapper");
+let cartModalOrderSum = document.querySelector(".cartModalOrderSum")
 
 document.querySelector(".introbtn").addEventListener("click", function () {
     productCardsWrapper.scrollIntoView({
@@ -84,8 +85,17 @@ function renderProducts() {
 
 renderProducts();
 
+function calcTotalSum() {
+    let sum = 0;
+    for (let i = 0; i < cartData.length; i++) {
+        sum += cartData[i].price * cartData[i].count;
+    }
+
+    cartModalOrderSum.innerHTML = sum + " $";
+}
+
 function renderCart() {
-    console.log(cartData)
+    calcTotalSum();
     cartModalLeftBlock.innerHTML = "";
     for (let i = 0; i < cartData.length; i++) {
         cartModalLeftBlock.innerHTML += `
@@ -104,17 +114,18 @@ function renderCart() {
     </div>
   </div>`;
 
-}
+    }
 
-let incBtns = document.querySelectorAll(".cartModalCounterInc");
-let decBtns = document.querySelectorAll(".cartModalCounterDec");
-let productCount = document.querySelectorAll(".cartModalProductCount");
+    let incBtns = document.querySelectorAll(".cartModalCounterInc");
+    let decBtns = document.querySelectorAll(".cartModalCounterDec");
+    let productCount = document.querySelectorAll(".cartModalProductCount");
 
-for (let i = 0; i < cartData.length; i++) {
-    incBtns[i].addEventListener("click", function () {
-        cartData[i].count += 1;
-        productCount[i].innerHTML = cartData[i].count;
-    });
+    for (let i = 0; i < cartData.length; i++) {
+        incBtns[i].addEventListener("click", function () {
+            cartData[i].count += 1;
+            productCount[i].innerHTML = cartData[i].count;
+            calcTotalSum();
+        });
 
     decBtns[i].addEventListener("click", function () {
         if (cartData[i].count <= 1) {
