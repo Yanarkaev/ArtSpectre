@@ -127,7 +127,12 @@ header {
     cursor: pointer;
 }
 
-.productCardsWrapper {
+.buyBtn:disabled{
+    opacity: 0.5;
+    cursor: no-drop;
+}
+
+.productCardsWrapper{
     max-width: 1100px;
     flex-wrap: wrap;
     display: flex;
@@ -284,6 +289,7 @@ footer {
     margin-top: 100px;
 }
 
+
 .footerInner {
     max-width: 1110px;
     margin: 0 auto;
@@ -291,5 +297,25 @@ footer {
 
 .footer-icon{
     margin-right: 20px;
+}
+
+
+.cartIconWrapper{
+    position: relative;
+}
+
+.cartIconCount{
+    display: block;
+    background-color: red;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
 }
 
