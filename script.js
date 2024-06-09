@@ -117,8 +117,16 @@ for (let i = 0; i < cartData.length; i++) {
     });
 
     decBtns[i].addEventListener("click", function () {
-        cartData[i].count -= 1;
-        productCount[i].innerHTML = cartData[i].count;
+        if (cartData[i].count <= 1) {
+            cartData.splice(i, 1);
+            renderCart();
+        }
+        else {
+            cartData[i].count -= 1;
+        }
+        productCount[i].    innerHTML = cartData[i].count;
     });
+
+    
 }
 }
