@@ -1,58 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>ArtSpectre</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style.css" />
-  <title>ArtSpectre</title>
-</head>
+  <body>
+    <header>
+      <!-- Шапка -->
+      <div class="headerInner">
+        <span class="logo">ArtStudio</span>
 
-<body>
-  <header>
-    <!-- Шапка -->
-    <div class="headerInner">
-      <span class="logo">ArtStudio</span>
+        <div class="cartIconWrapper">
+          <img src="./assets/cart-icon.svg" alt="" class="cartIcon" />
+          <span class="cartIconCount">12</span>
+        </div>
+        <div class="cartModal hide">
+          <div class="emptyCartBlock">В корзине пусто, как на душе</div>
+          <div class="cartModalOrderInner">
+            <div class="cartModalLeftBlock"></div>
 
-      <div class="cartIconWrapper">
-        <img src="./assets/cart-icon.svg" alt="" class="cartIcon" />
-        <span class="cartIconCount">12</span>
-      </div>
-      <div class="cartModal hide">
-        <div class="cartModalLeftBlock"></div>
-
-        <div class="cartModalOrder">
-          <div class="cartModalTotal">
-            <span>Итого:</span>
-            <span class="cartModalOrderSum">1200000$</span>
+            <div class="cartModalOrder">
+              <div class="cartModalTotal">
+                <span>Итого:</span>
+                <span class="cartModalOrderSum">0$</span>
+              </div>
+              <div class="cartModalOrderBtn">Заказать</div>
+            </div>
           </div>
-          <div class="cartModalOrderBtn">Заказать</div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <div class="introblock">
-      <h1 class="introtitle">Добро пожаловать</h1>
-      <p class="introsub">в мою маленькую студию, где я создаю настроение</p>
-      <button class="introbtn">Смотреть</button>
-    </div>
+    <main>
+      <div class="introblock">
+        <h1 class="introtitle">Добро пожаловать</h1>
+        <p class="introsub">в мою маленькую студию, где я создаю настроение</p>
+        <button class="introbtn">Смотреть</button>
+      </div>
 
-    <!-- Главная -->
-    <div class="productCardsWrapper"></div>
-  </main>
+      <!-- Главная -->
+      <div class="productCardsWrapper"></div>
+    </main>
 
-  <footer>
-    <div class="footerInner">
+    <footer>
+      <div class="footerInner">
+        <img
+          class="footer-icon"
+          src="./assets/free-icon-instagram-2111463 1.svg"
+          alt=""
+        />
+        <img
+          class="footer-icon"
+          src="./assets/free-icon-vk-5968835 1.svg"
+          alt=""
+        />
+        <img
+          class="footer-icon"
+          src="./assets/free-icon-whatsapp-3536445 1.svg"
+          alt=""
+        />
+      </div>
+    </footer>
 
-      <img class="footer-icon" src="./assets/free-icon-instagram-2111463 1.svg" alt="">
-      <img class="footer-icon" src="./assets/free-icon-vk-5968835 1.svg" alt="">
-      <img class="footer-icon" src="./assets/free-icon-whatsapp-3536445 1.svg" alt="">
-    </div>
-  </footer>
-
-  <script src="./script.js"></script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>
