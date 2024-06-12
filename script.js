@@ -33,6 +33,41 @@ let data = [
     price: 2900000,
     imgPath: "./assets/photo_2024-06-01_09-47-18.jpg",
   },
+
+  {
+    id: 7,
+    name: "Лес",
+    price: 1200000,
+    imgPath: "./assets/08.jpg",
+  },
+
+  {
+    id: 8,
+    name: "Речка в лесу",
+    price: 1400000,
+    imgPath: "./assets/1700084646_pictures-pibig-info-p-risunok-na-temu-krasota-rodnoi-prirodi-ins-1.jpg",
+  },
+
+  {
+    id: 9,
+    name: "Осень",
+    price: 1600000,
+    imgPath: "./assets/1700084663_pictures-pibig-info-p-risunok-na-temu-krasota-rodnoi-prirodi-ins-14.jpg",
+  },
+
+  {
+    id: 10,
+    name: "Река",
+    price: 1100000,
+    imgPath: "./assets/img-e863314b79402a20444c67293e083539-v.jpg",
+  },
+
+  {
+    id: 11,
+    name: "Пейзаж гор",
+    price: 900000,
+    imgPath: "./assets/sakmara.jpg",
+  },
 ];
 
 let cartData = [];
